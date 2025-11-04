@@ -5,3 +5,4 @@ public class Soma {
         // Sendo chamado na classe Perfil.
     }
 }
+
