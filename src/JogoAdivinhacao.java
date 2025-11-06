@@ -9,10 +9,10 @@ public class JogoAdivinhacao {
          // 4. Caso o jogador erre as 5 tentativas, o jogo dirá qual era o número e finalizará.
          // 5. Caso o jogador acerte, o programa dirá parabéns.
          // 6. Caso ele queira encerrar a atividade, deverá digitar -1.
-        int numeroAleatorio = new Random().nextInt(0,100);
+        int numeroAleatorio = new Random().nextInt(0,5);
         IO.println("""
                             O número secreto foi sorteado! Digite um número para tentar descobrí-lo.
-                            Você possui 5 tentativas, então faça valer! 
+                            Você possui 5 tentativas, então faça valer!
                             (Digite -1 caso queira finalizar o jogo)
                         """);
         IO.println("Iniciando... Vai!");
@@ -21,6 +21,10 @@ public class JogoAdivinhacao {
                 int numeroJogador = tentativa.nextInt();
                 if (numeroJogador == numeroAleatorio) {
                     IO.println("Parabéns! Você acertou em cheio!");
+                    break;
+                }
+                else if (numeroJogador == -1 || tentativaJogada == 0) {
+                    IO.println("Que pena! O número aleatório era "+numeroAleatorio+" Até mais!");
                     break;
                 }
                 else {
@@ -32,6 +36,5 @@ public class JogoAdivinhacao {
                     }
                 }
             }
-        IO.println(numeroAleatorio);
     }
 }
