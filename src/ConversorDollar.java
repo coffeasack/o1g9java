@@ -9,7 +9,8 @@ public class ConversorDollar{
         IO.println("Digite quantos dólares você possui: ");
 
         double valorDollar = addValorDollar.nextDouble();
-        double valorDollarparaReal = valorDollar * valorReal;        DecimalFormat formatacao = new DecimalFormat("#.##");
+        double valorDollarparaReal = valorDollar * valorReal;
+        DecimalFormat formatacao = new DecimalFormat("#.##");
 
         IO.println("A conversão de $"+valorDollar+" para reais será R$"+formatacao.format(valorDollarparaReal));
     }
